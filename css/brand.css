@@ -15,6 +15,8 @@
       odvoď ji odsud (sémantické tokeny, typescale, radius, elevation).
    ========================================================================== */
 
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap");
+
 /* Brandové fonty: soubory dej do assets/fonts/ a odkomentuj.
 @font-face {
   font-family: "Brand Heading";
@@ -49,8 +51,8 @@
   --brand-neutral-light:  #ffffff;  /* plochy, pozadí bloků */
 
   /* --- Typografie --- */
-  --brand-font-heading:   system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --brand-font-body:      system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --brand-font-heading:   "Manrope", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --brand-font-body:      "Manrope", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --brand-heading-weight: 700;
   --brand-heading-case:   none;     /* none | uppercase */
 
