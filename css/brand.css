@@ -15,8 +15,6 @@
       odvoď ji odsud (sémantické tokeny, typescale, radius, elevation).
    ========================================================================== */
 
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap");
-
 /* Brandové fonty: soubory dej do assets/fonts/ a odkomentuj.
 @font-face {
   font-family: "Brand Heading";
@@ -38,21 +36,21 @@
      ====================================================================== */
 
   /* --- Primární paleta --- */
-  --brand-primary:        #d6336c;  /* hlavní barva: tlačítka, aktivní navigace, akcenty */
-  --brand-on-primary:     #ffffff;  /* text na hlavní barvě (musí mít kontrast min. 4,5 : 1) */
-  --brand-primary-2:      #f7c6d6;  /* druhá primární barva */
+  --brand-primary:        #fc92b7;  /* hlavní barva: tlačítka, aktivní navigace, akcenty */
+  --brand-on-primary:     #131619;  /* text na hlavní barvě (musí mít kontrast min. 4,5 : 1) */
+  --brand-primary-2:      #8a8a8a;  /* druhá primární barva */
 
   /* --- Sekundární paleta --- */
-  --brand-secondary-1:    #e9e4da;
-  --brand-secondary-2:    #cfc9bd;
+  --brand-secondary-1:    #1d2025;
+  --brand-secondary-2:    #d0d0d0;
 
   /* --- Neutrální barvy --- */
-  --brand-neutral-dark:   #171717;  /* text */
-  --brand-neutral-light:  #f7f5f0;  /* plochy, pozadí bloků */
+  --brand-neutral-dark:   #131619;  /* text */
+  --brand-neutral-light:  #ffffff;  /* plochy, pozadí bloků */
 
   /* --- Typografie --- */
-  --brand-font-heading:   "Manrope", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --brand-font-body:      "Manrope", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --brand-font-heading:   system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --brand-font-body:      system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --brand-heading-weight: 700;
   --brand-heading-case:   none;     /* none | uppercase */
 
@@ -107,23 +105,23 @@
 
   /* --- 4a. Sémantická paleta --- */
   --ui-primary:              var(--brand-primary);
-  --ui-primary-hover:        color-mix(in oklch, var(--brand-primary) 84%, black);
+  --ui-primary-hover:        color-mix(in oklch, var(--brand-primary) 84%, white);
   --ui-primary-foreground:   var(--brand-on-primary);
-  --ui-secondary:            var(--brand-secondary-2);
-  --ui-secondary-foreground: var(--brand-neutral-dark);
-  --ui-background:           #ffffff;                     /* základní pozadí webu */
-  --ui-foreground:           var(--brand-neutral-dark);   /* hlavní text */
-  --ui-muted:                var(--brand-neutral-light);  /* tlumené plochy */
-  --ui-muted-foreground:     color-mix(in oklch, var(--brand-neutral-dark) 72%, white); /* sekundární text */
-  --ui-border:               color-mix(in oklch, var(--brand-neutral-dark) 16%, white);
-  --ui-inverted:             var(--brand-neutral-dark);   /* tmavé sekce na světlém webu */
-  --ui-inverted-foreground:  var(--brand-neutral-light);
-  --ui-accent:               var(--brand-primary-2);
+  --ui-secondary:            var(--brand-secondary-1);
+  --ui-secondary-foreground: var(--brand-neutral-light);
+  --ui-background:           var(--brand-neutral-dark);   /* značka je tmavá: základní pozadí webu */
+  --ui-foreground:           var(--brand-neutral-light);  /* hlavní text */
+  --ui-muted:                var(--brand-secondary-1);    /* karty a tlumené plochy */
+  --ui-muted-foreground:     color-mix(in oklch, var(--brand-neutral-light) 68%, var(--brand-neutral-dark)); /* sekundární text */
+  --ui-border:               color-mix(in oklch, var(--brand-neutral-dark) 76%, white);
+  --ui-inverted:             var(--brand-neutral-light);  /* světlé sekce na tmavém webu */
+  --ui-inverted-foreground:  var(--brand-neutral-dark);
+  --ui-accent:               var(--brand-primary);
   --ui-accent-foreground:    var(--brand-neutral-dark);
-  --ui-destructive:          var(--brand-error);          /* chybové stavy */
-  --ui-destructive-foreground: #ffffff;
-  --ui-success:              var(--brand-success);
-  --ui-success-foreground:   #ffffff;
+  --ui-destructive:          color-mix(in oklch, var(--brand-error) 55%, white);   /* chybové stavy */
+  --ui-destructive-foreground: var(--brand-neutral-dark);
+  --ui-success:              color-mix(in oklch, var(--brand-success) 55%, white);
+  --ui-success-foreground:   var(--brand-neutral-dark);
   --ui-ring:                 var(--brand-primary);        /* focus */
 
   /* --- 4b. Typography scale --- */
@@ -185,28 +183,30 @@
 }
 
 /* --- 4f. Dark mode ---
+   Značka je tmavá už ve výchozím stavu, proto jsou hodnoty shodné s blokem 4a.
+   Světlá varianta zatím není definovaná.
    Stejné názvy tokenů, jiné hodnoty. Hodnoty zde piš napřímo
    (odvozené tokeny se v tmavém režimu znovu nepřepočítají). */
 [data-theme="dark"] {
-  --ui-primary:              color-mix(in oklch, var(--brand-primary) 45%, white);
-  --ui-primary-hover:        color-mix(in oklch, var(--brand-primary) 32%, white);
-  --ui-primary-foreground:   var(--brand-neutral-dark);
-  --ui-secondary:            color-mix(in oklch, var(--brand-neutral-dark) 78%, white);
+  --ui-primary:              var(--brand-primary);
+  --ui-primary-hover:        color-mix(in oklch, var(--brand-primary) 84%, white);
+  --ui-primary-foreground:   var(--brand-on-primary);
+  --ui-secondary:            var(--brand-secondary-1);
   --ui-secondary-foreground: var(--brand-neutral-light);
-  --ui-background:           var(--brand-neutral-dark);
-  --ui-foreground:           var(--brand-neutral-light);
-  --ui-muted:                color-mix(in oklch, var(--brand-neutral-dark) 88%, white);
-  --ui-muted-foreground:     color-mix(in oklch, var(--brand-neutral-light) 68%, var(--brand-neutral-dark));
+  --ui-background:           var(--brand-neutral-dark);   /* značka je tmavá: základní pozadí webu */
+  --ui-foreground:           var(--brand-neutral-light);  /* hlavní text */
+  --ui-muted:                var(--brand-secondary-1);    /* karty a tlumené plochy */
+  --ui-muted-foreground:     color-mix(in oklch, var(--brand-neutral-light) 68%, var(--brand-neutral-dark)); /* sekundární text */
   --ui-border:               color-mix(in oklch, var(--brand-neutral-dark) 76%, white);
-  --ui-inverted:             var(--brand-neutral-light);
+  --ui-inverted:             var(--brand-neutral-light);  /* světlé sekce na tmavém webu */
   --ui-inverted-foreground:  var(--brand-neutral-dark);
-  --ui-accent:               var(--brand-primary-2);
+  --ui-accent:               var(--brand-primary);
   --ui-accent-foreground:    var(--brand-neutral-dark);
-  --ui-destructive:          color-mix(in oklch, var(--brand-error) 55%, white);
+  --ui-destructive:          color-mix(in oklch, var(--brand-error) 55%, white);   /* chybové stavy */
   --ui-destructive-foreground: var(--brand-neutral-dark);
   --ui-success:              color-mix(in oklch, var(--brand-success) 55%, white);
   --ui-success-foreground:   var(--brand-neutral-dark);
-  --ui-ring:                 color-mix(in oklch, var(--brand-primary) 45%, white);
+  --ui-ring:                 var(--brand-primary);        /* focus */
   --ui-shadow-sm: 0 1px 2px rgb(0 0 0 / 0.4);
   --ui-shadow-md: 0 4px 14px rgb(0 0 0 / 0.45);
   --ui-shadow-lg: 0 18px 44px rgb(0 0 0 / 0.55);

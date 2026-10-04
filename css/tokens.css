@@ -6,16 +6,16 @@
 
 :root {
   /* --- Barvy rozhraní (napojené na brand.css) --- */
-  --c-bg:            #ffffff;
-  --c-surface:       var(--brand-neutral-light);
-  --c-surface-2:     #ebebeb;
-  --c-placeholder:   #e2e2e2;
-  --c-placeholder-2: #cfcfcf;
-  --c-border:        #d4d4d4;
-  --c-border-strong: #a3a3a3;
-  --c-text:          var(--brand-neutral-dark);
-  --c-text-muted:    #5c5c5c;
-  --c-text-subtle:   #8a8a8a;
+  --c-bg:            var(--brand-neutral-dark);
+  --c-surface:       var(--brand-secondary-1);
+  --c-surface-2:     color-mix(in srgb, var(--brand-secondary-1) 90%, white);
+  --c-placeholder:   color-mix(in srgb, var(--brand-secondary-1) 84%, white);
+  --c-placeholder-2: color-mix(in srgb, var(--brand-secondary-1) 72%, white);
+  --c-border:        color-mix(in srgb, var(--brand-neutral-dark) 80%, white);
+  --c-border-strong: color-mix(in srgb, var(--brand-neutral-dark) 55%, white);
+  --c-text:          var(--brand-neutral-light);
+  --c-text-muted:    color-mix(in srgb, var(--brand-neutral-light) 72%, var(--brand-neutral-dark));
+  --c-text-subtle:   color-mix(in srgb, var(--brand-neutral-light) 55%, var(--brand-neutral-dark));
   --c-accent:        var(--brand-primary);      /* tlačítka, aktivní navigace, focus */
   --c-on-accent:     var(--brand-on-primary);
   --c-accent-soft:   color-mix(in srgb, var(--brand-primary) 12%, var(--c-bg));

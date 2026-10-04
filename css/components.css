@@ -82,7 +82,7 @@
   font-size: var(--fs-sm);
   line-height: 1.45;
   color: var(--c-text-muted);
-  background: rgb(255 255 255 / 0.88);
+  background: color-mix(in srgb, var(--c-bg) 88%, transparent);
   border-radius: var(--radius-sm);
 }
 
@@ -149,7 +149,7 @@
 .swatch__chip span {
   padding: 0.15em 0.5em;
   color: var(--c-text-muted);
-  background: rgb(255 255 255 / 0.88);
+  background: color-mix(in srgb, var(--c-bg) 88%, transparent);
   border-radius: var(--radius-sm);
 }
 .swatch--large .swatch__chip { aspect-ratio: 16 / 7; }
@@ -232,7 +232,7 @@
 .proportion__part span {
   padding: 0.15em 0.5em;
   color: var(--c-text-muted);
-  background: rgb(255 255 255 / 0.88);
+  background: color-mix(in srgb, var(--c-bg) 88%, transparent);
   border-radius: var(--radius-sm);
 }
 .proportion__part:last-child { border-right: 0; }
@@ -645,7 +645,7 @@ code { font-family: inherit; font-size: 1em; color: var(--c-text); background: n
   border-radius: var(--radius-lg);
 }
 .overview-web__tile--primary { color: var(--brand-on-primary); background: var(--brand-primary); }
-.overview-web__tile--light { background: var(--brand-neutral-light); }
+.overview-web__tile--light { background: var(--c-surface); }
 .overview-web__tile p { margin: 0; }
 .overview-web__label { font-size: var(--fs-xs); opacity: 0.8; }
 .overview-web__claim { font-family: var(--font-heading); font-weight: var(--brand-heading-weight); font-size: var(--fs-xl); line-height: 1.15; text-transform: var(--brand-heading-case); }
